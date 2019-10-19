@@ -1,10 +1,3 @@
-$("#submitEmail").click(function(){
-    let email=$("#emailAddress").val();
-    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    if(regex.test(email)){
-        $(".startquiz").css("display","flex");
-    }
-})
 
 let text;
 let selectedIndex=-1;
@@ -130,4 +123,29 @@ function storeAns(index)
 }
 $(".submitButton").click(function(){
     checkAns();
+})
+$("#submitEmail").click(function(){
+    email=$("#emailAddress").val();
+   var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+   if(regex.test(email)){
+       $(".startquiz").css("display","flex");
+   }
+   
+   $.ajax({
+       type: "POST",
+       dataType: "json",
+       url: "http://localhost:8000/",
+       data:{
+           'email':email
+       },
+       success: function(data){
+          result=data;
+          console.log(result)
+          getQues();
+       //    console.log(result[0].questions[0].question)
+       },
+       error:function(err){
+           console.log("fail")
+   }
+   })
 })
