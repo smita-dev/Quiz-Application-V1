@@ -12,13 +12,7 @@ $(document).ready(function(){
         type: "GET",
         dataType: "json",
         url: "http://localhost:8000/",
-        // crossDomain: true,
-        // headers: {
-        //     // "accept": "application/json",
-        //     'Access-Control-Allow-Origin':"*"
-        // },
-
-        // access-control-allow-origin: ,
+       
         success: function(data){
            result=data;
            console.log(result)
