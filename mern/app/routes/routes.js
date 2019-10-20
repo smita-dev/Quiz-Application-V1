@@ -1,17 +1,27 @@
-
 module.exports = (app, db) => {
-    app.post("/", (req, res) => {
-        //console.log('/')
-        console.log(req);
-        console.log(req.body.email);
-        const note= req.body
-        db.collection("answer").insertOne(note, function(err, res) {
-            if (err) throw err;
-            console.log("1 document inserted");
-          });
-       
-       // res.status(200).send('one do');
-    });
+    // app.post("/", (req, res) => {
+    //     //console.log('/')
+    //     console.log(req);
+    //     console.log(req.body.email);
+    //     const note= req.body
+    //     db.collection("answer").insertOne(note, function(err, res) {
+    //         if (err) throw err;
+    //         console.log("1 document inserted");
+    //       });
+    //    // res.status(200).send('one do');
+    // });
+         app.post("/", (req, res) => {
+            //console.log('/')
+            console.log(req);
+            console.log(req.body.reqUsername);
+            console.log(req.body.reqPassword);
+            const note= req.body
+            db.collection("user").insertOne(note, function(err, res) {
+                if (err) throw err;
+                console.log("1 document inserted");
+              });
+           // res.status(200).send('one do');
+        });
     app.get("/", (req, res) => {
         // console.log('/routes')
         // db.collection('test').findOne({}, (err, result) => {

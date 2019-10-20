@@ -18,17 +18,22 @@
     width: 100vw;
     justify-content: center;
     align-items: center;
-    display: flex; 
+    display: flex;
 }
 .user,.pwd{
     height: 10%;
     width: 100vw;
     justify-content: center;
     align-items: center;
-    display: flex; 
+    display: flex;
+}
+.submitbtn{
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 .startquiz{
-    display: none; 
+    display: none;
 }
 .heading{
     height: 33.33%;

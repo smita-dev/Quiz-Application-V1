@@ -2,9 +2,11 @@
 const express = require('express');
 const mongo = require('mongodb').MongoClient;
 const db = require('./mern/config/config');
- const cors=require('cors');
+// const bodyParser = require('body-parser');
+const cors=require('cors');
 const port = 8000;
 const app = express();
+// app.use(bodyParser);
  app.use(cors());
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());

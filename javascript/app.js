@@ -6,7 +6,9 @@ let arr;
 let ansArr=[];
 let queCount=0;
 let result;
-
+let email;
+let username;
+let password;
 $(document).ready(function(){
     $.ajax({
         type: "GET",
@@ -129,30 +131,55 @@ function storeAns(index)
 $(".submitButton").click(function(){
     checkAns();
 })
-let email;
-$("#submitEmail").click(function(){
-    email=$("#emailAddress").val();
-   var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-   if(regex.test(email)){
-       $(".startquiz").css("display","flex");
-   }
 
-   $.ajax({
-       type: "POST",
-       dataType: "json",
-       url: "http://localhost:8000/",
-       data:{
-           'email':email
-       },
-    //    success: function(data){
-    //       result=data;
-    //       console.log(result)
-    //       //getQues();
-    //    //    console.log(result[0].questions[0].question)
-    //    },
-       error:function(err){
-           console.log("fail")
-   }
-   })
+// $("#submitEmail").click(function(){
+//     email=$("#emailAddress").val();
+//    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+//    if(regex.test(email)){
+//        $(".startquiz").css("display","flex");
+//    }
+
+//    $.ajax({
+//        type: "POST",
+//        dataType: "json",
+//        url: "http://localhost:8000/",
+//        data:{
+//            'email':email
+//        },
+//     //    success: function(data){
+//     //       result=data;
+//     //       console.log(result)
+//     //       //getQues();
+//     //    //    console.log(result[0].questions[0].question)
+//     //    },
+//        error:function(err){
+//            console.log("fail")
+//    }
+//    })
+// })
+
+$(".submit").click(function(){
+    username=$("#username").val();
+    password=$("#password").val();
+    console.log(username);
+    console.log(password);
+    $(".startquiz").css("display","flex");
+    $.ajax({
+        type: "POST",
+        dataType: "json",
+        url: "http://localhost:8000/",
+        data:{
+            reqUsername:username,
+            reqPassword:password
+        },
+        // success: function(data){
+        // //    result=data;
+        //    console.log("success");
+           //getQues();
+        //    console.log(result[0].questions[0].question)
+        // },
+        error:function(err){
+            console.log("fail")
+    }
+    })
 })
-
