@@ -13,9 +13,9 @@ module.exports = (app, db) => {
          app.post("/", (req, res) => {
             //console.log('/')
             console.log(req);
-            console.log(req.body.reqUsername);
-            console.log(req.body.reqPassword);
-            const note= req.body
+            console.log(req.body.Username);
+            console.log(req.body.Password);
+            const note= req.body;
             db.collection("user").insertOne(note, function(err, res) {
                 if (err) throw err;
                 console.log("1 document inserted");
@@ -34,7 +34,7 @@ module.exports = (app, db) => {
         //         console.log(result.questions.q1.options)
         //     }
         // });
-
+        9325240672
     
         db.collection("test").find({}).toArray(function(err, result) {
         if (err) throw err;

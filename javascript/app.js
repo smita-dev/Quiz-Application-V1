@@ -159,8 +159,8 @@ $(".submitButton").click(function(){
 // })
 
 $(".submit").click(function(){
-    username=$("#username").val();
-    password=$("#password").val();
+    username=$(".username").val();
+    password=$(".password").val();
     console.log(username);
     console.log(password);
     $(".startquiz").css("display","flex");
@@ -169,8 +169,8 @@ $(".submit").click(function(){
         dataType: "json",
         url: "http://localhost:8000/",
         data:{
-            reqUsername:username,
-            reqPassword:password
+            Username:username,
+            Password:password
         },
         // success: function(data){
         // //    result=data;
