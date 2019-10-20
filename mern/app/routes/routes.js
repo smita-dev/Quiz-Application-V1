@@ -1,8 +1,8 @@
 
 module.exports = (app, db) => {
     app.post("/", (req, res) => {
-        console.log('/')
-        console.log(req.body);
+        //console.log('/')
+        console.log(req);
         console.log(req.body.email);
         const note= req.body
         db.collection("answer").insertOne(note, function(err, res) {

@@ -129,7 +129,7 @@ function storeAns(index)
 $(".submitButton").click(function(){
     checkAns();
 })
-
+let email;
 $("#submitEmail").click(function(){
     email=$("#emailAddress").val();
    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
