@@ -83,7 +83,6 @@
     border-radius: 30px;
     background:var(--notSelected);
     margin: 2%;
-
 }
 .submitButton{
     height:60px;
@@ -99,8 +98,20 @@
     background:#4DB6AC;
     margin: 3%;
     float: right;
-
 }
+
 .score-display{
     display: none;
+    background-color:#4DB6AC;
+    height: 400px;
+    width: 400px;
+
+}
+.heading{
+    font-size: 2rem;
+    margin: 2rem;
+}
+.score{
+    font-size: 3rem;
+    margin: 2rem;
 }

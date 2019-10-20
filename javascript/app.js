@@ -109,7 +109,7 @@ function checkAns()
         }
     }
     console.log(correctAns);
-    alert(`You Scored : ${correctAns}`);
+    //alert(`You Scored : ${correctAns}`);
     $(".quiz").hide();
     
     $('.score-display').show();
