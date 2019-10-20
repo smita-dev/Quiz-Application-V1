@@ -34,7 +34,6 @@ module.exports = (app, db) => {
         //         console.log(result.questions.q1.options)
         //     }
         // });
-        9325240672
     
         db.collection("test").find({}).toArray(function(err, result) {
         if (err) throw err;
@@ -43,4 +42,7 @@ module.exports = (app, db) => {
         });
 
     });
+    app.get("/login",(req,res)=>{
+        db.collection("test").findOne{},(err,result)
+    })
  };
