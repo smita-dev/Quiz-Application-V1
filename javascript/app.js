@@ -110,8 +110,12 @@ function checkAns()
     }
     console.log(correctAns);
     alert(`You Scored : ${correctAns}`);
+    $(".quiz").hide();
+    
+    $('.score-display').show();
+    $(".score").html(correctAns+"/ 10");
     // document.getElementById('scored').innerText=correctAns;
-    $(".score").html(correctAns+"/ 10")
+    
 }
 
 
