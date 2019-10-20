@@ -1,26 +1,26 @@
 {
-  "name": "quiz-application-v1",
+  "name": "quiz-application",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/smita-dev/Quiz-Application-V1.git"
+    "url": "git+https://github.com/patils-dev/Quiz-Application.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/smita-dev/Quiz-Application-V1/issues"
+    "url": "https://github.com/patils-dev/Quiz-Application/issues"
   },
-  "homepage": "https://github.com/smita-dev/Quiz-Application-V1#readme",
+  "homepage": "https://github.com/patils-dev/Quiz-Application#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongodb": "^3.3.3",
-    "nodemon": "^1.19.4"
+    "mongodb": "^3.3.2",
+    "nodemon": "^1.19.3"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "description": ""
 }

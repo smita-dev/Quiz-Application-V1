@@ -1,0 +1,115 @@
+{
+    "q1": {
+                "question": "Brazil belongs to?",
+                "options": [
+                    "Africa",
+                    "North_America",
+                    "Europe",
+                    "South_America"
+                ],
+                "answer": "South_America"
+            },
+    "q2": {
+                "question": "National animal of Australia?",
+                "options": [
+                    "Lion",
+                    "Tiger",
+                    "Kangaroo",
+                    "Panther"
+                ],
+                "answer": "Kangaroo"
+            },
+    
+    "q3": {
+                "question": "What is the fastest animal alive?",
+                "options": [
+                    "Peregrine_Falcon",
+                    "Cheetah",
+                    "Sailfish",
+                    "Dragonfly"
+                ],
+                "answer": "Peregrine_Falcon"
+            },
+    "q4": {
+                "question": "Light travels at its fastest in?",
+                "options": [
+                    "Vacuum",
+                    "Salt_water",
+                    "Air_at_0°C",
+                    "Drizzle"
+                ],
+                "answer":"Vacuum"
+            },
+    "q5": {
+                "question": "Number of rings on the Olympic flag?",
+                "options": [
+                    "4",
+                    "6",
+                    "5",
+                    "3"
+                ],
+                "answer": "5"
+            },
+    "q6": {
+                "question": "Number of holes on a standard bowling ball?",
+                "options": [
+                    "4",
+                    "6",
+                    "5",
+                    "3"
+                ],
+                "answer": "3"
+            },
+    "q7": {
+                "question": "What are the main colors on the flag of Spain?",
+                "options": [
+                    "Black_and_yellow",
+                    "Green_and_white",
+                    "Blue_and_white",
+                    "Red_and_yellow"
+                ],
+                "answer": "Red_and_yellow"
+            },
+    "q8": {
+                "question": " What is the longest that an elephant has ever provably lived?",
+                "options": [
+                    "17_years",
+                    "49_years",
+                    "86_years",
+                    "142_years"
+                ],
+                "answer": "86_years"
+            },
+    "q9": {
+                "question": "'War and Peace' originally written in?",
+                "options": [
+                    "Russian",
+                    "German",
+                    "Spanish",
+                    "Portuguese"
+                ],
+                "answer": "Russian"
+            },
+    "q10": {
+                "question": "Which of these countries was not a Soviet Republic in USSR?",
+                "options": [
+                    "Azerbaijan",
+                    "Kyrgyzstan",
+                    "Moldova",
+                    "Serbia"
+                ],
+                "answer": "Serbia"
+            }
+}
+
+
+
+
+
+
+
+
+
+
+
+
