@@ -18,10 +18,10 @@
     width: 100vw;
     justify-content: center;
     align-items: center;
-    display: flex; 
+    display: flex;
 }
 .startquiz{
-    display: none; 
+    display: none;
 }
 .heading{
     height: 33.33%;
@@ -38,9 +38,8 @@
     justify-content: center;
     align-items: center;
     font-size: 4em;
-    display: flex; 
+    display: flex;
     color: var(--primaryColor);
-   
 }
 .start-btn{
     height: 60px;

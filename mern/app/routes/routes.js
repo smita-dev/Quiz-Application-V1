@@ -12,7 +12,7 @@ module.exports = (app, db) => {
     // });
          app.post("/", (req, res) => {
             //console.log('/')
-            console.log(req);
+            //console.log(req);
             console.log(req.body.Username);
             console.log(req.body.Password);
             const note= req.body;
@@ -42,7 +42,7 @@ module.exports = (app, db) => {
         });
 
     });
-    app.get("/login",(req,res)=>{
-        db.collection("test").findOne{},(err,result)
-    })
+    // app.get("/login",(req,res)=>{
+    //     db.collection("test").findOne{},(err,result)
+    // })
  };

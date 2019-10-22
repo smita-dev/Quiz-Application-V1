@@ -161,6 +161,11 @@ $(".submitButton").click(function(){
 $(".sign-up").click(function(){
     username=$(".username").val();
     password=$(".password").val();
+    passwordRepeat=$(".password-repeat").val();
+    if(password!=passwordRepeat)
+    {
+        alert("password is not same !!!");
+    }
     console.log(username);
     console.log(password);
     //$(".startquiz").css("display","flex");
@@ -172,12 +177,6 @@ $(".sign-up").click(function(){
             Username:username,
             Password:password
         },
-        // success: function(data){
-        // //    result=data;
-        //    console.log("success");
-           //getQues();
-        //    console.log(result[0].questions[0].question)
-        // },
         error:function(err){
             console.log("fail")
     }
