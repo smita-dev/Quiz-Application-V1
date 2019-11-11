@@ -7,7 +7,7 @@ const db = require('./mern/config/config');
 const cors=require('cors');
 const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy;
-const port = 8000;
+const port = process.env.PORT || 8000;
 const app = express();
 //app.use(expressLayouts);
 //app.set('view engine','ejs');
