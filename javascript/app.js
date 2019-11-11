@@ -13,7 +13,7 @@ $(document).ready(function(){
     $.ajax({
         type: "GET",
         dataType: "json",
-        url: "http://localhost:8000/",
+        url: "https://quizzyapplication.herokuapp.com/",
         // crossDomain: true,
         // headers: {
         //      "accept": "application/json",
@@ -172,7 +172,7 @@ $(".sign-up").click(function(){
     $.ajax({
         type: "POST",
         dataType: "json",
-        url: "http://localhost:8000/",
+        url: "https://quizzyapplication.herokuapp.com/",
         data:{
             Username:username,
             Password:password
@@ -191,7 +191,7 @@ $(".log-in").click(function(){
     $.ajax({
         type: "GET",
         dataType: "json",
-        url: "http://localhost:8000/login",
+        url: "https://quizzyapplication.herokuapp.com/login",
         // crossDomain: true,
         // headers: {
         //      "accept": "application/json",
