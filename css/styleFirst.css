@@ -32,9 +32,9 @@
     align-items: center;
     display: flex;
 }
-.startquiz{
+/* .startquiz{
     display: none;
-}
+} */
 .heading{
     height: 20%;
     width: 100vw;

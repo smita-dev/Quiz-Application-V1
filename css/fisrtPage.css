@@ -21,7 +21,7 @@
     display: flex;
 }
 .startquiz{
-    display: none;
+    display: flex;
 }
 .heading{
     height: 33.33%;
