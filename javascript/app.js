@@ -150,54 +150,54 @@ $(".submitButton").click(function(){
 //    })
 // })
 
-$(".sign-up").click(function(){
-    username=$(".username").val();
-    password=$(".password").val();
-    passwordRepeat=$(".password-repeat").val();
-    if(password!=passwordRepeat)
-    {
-        alert("password is not same !!!");
-    }
-    console.log(username);
-    console.log(password);
-    //$(".startquiz").css("display","flex");
-    $.ajax({
-        type: "POST",
-        dataType: "json",
-        url: "https://quizzyapplication.herokuapp.com/",
-        data:{
-            Username:username,
-            Password:password
-        },
-        error:function(err){
-            console.log("fail")
-    }
-    })
-})
-$(".log-in").click(function(){
-    username=$(".username").val();
-    password=$(".password").val();
-    console.log(username);
-    console.log(password);
-    //$(".startquiz").css("display","flex");
-    $.ajax({
-        type: "GET",
-        dataType: "json",
-        url: "https://quizzyapplication.herokuapp.com/login",
-        // crossDomain: true,
-        // headers: {
-        //      "accept": "application/json",
-        //     'Access-Control-Allow-Origin':"*"
-        // },
-        // access-control-allow-origin: ,
-        success: function(data){
-           result=data;
-           console.log(result)
-           getQues();
-        //    console.log(result[0].questions[0].question)
-        },
-        error:function(err){
-            console.log(err);
-        }
-    })
-});
+// $(".sign-up").click(function(){
+//     username=$(".username").val();
+//     password=$(".password").val();
+//     passwordRepeat=$(".password-repeat").val();
+//     if(password!=passwordRepeat)
+//     {
+//         alert("password is not same !!!");
+//     }
+//     console.log(username);
+//     console.log(password);
+//     //$(".startquiz").css("display","flex");
+//     $.ajax({
+//         type: "POST",
+//         dataType: "json",
+//         url: "https://quizzyapplication.herokuapp.com/",
+//         data:{
+//             Username:username,
+//             Password:password
+//         },
+//         error:function(err){
+//             console.log("fail")
+//     }
+//     })
+// })
+// $(".log-in").click(function(){
+//     username=$(".username").val();
+//     password=$(".password").val();
+//     console.log(username);
+//     console.log(password);
+//     //$(".startquiz").css("display","flex");
+//     $.ajax({
+//         type: "GET",
+//         dataType: "json",
+//         url: "https://quizzyapplication.herokuapp.com/login",
+//         // crossDomain: true,
+//         // headers: {
+//         //      "accept": "application/json",
+//         //     'Access-Control-Allow-Origin':"*"
+//         // },
+//         // access-control-allow-origin: ,
+//         success: function(data){
+//            result=data;
+//            console.log(result)
+//            getQues();
+//         //    console.log(result[0].questions[0].question)
+//         },
+//         error:function(err){
+//             console.log(err);
+//         }
+//     })
+// });
