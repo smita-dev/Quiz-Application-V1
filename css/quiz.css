@@ -108,14 +108,14 @@
     width: 400px;
 
 }
-.heading{
+.wishing{
     font-size: 2rem;
-    /* margin: 2rem; */
+    margin-top: 2rem;
     color: white;
 }
 .score{
     font-size: 3rem;
-    margin: 2rem;
+    margin-top: 2rem;
 }
 .logo{
     height:40px;
