@@ -14,17 +14,10 @@ $(document).ready(function(){
         type: "GET",
         dataType: "json",
         url: "https://quizzyapplication.herokuapp.com/",
-        // crossDomain: true,
-        // headers: {
-        //      "accept": "application/json",
-        //     'Access-Control-Allow-Origin':"*"
-        // },
-        // access-control-allow-origin: ,
         success: function(data){
            result=data;
            console.log(result)
            getQues();
-        //    console.log(result[0].questions[0].question)
         },
         error:function(err){
             console.log(err);
@@ -44,7 +37,7 @@ function getQues(){
     $(".option2").text(result[0].questions[queIndex].options[1]);
     $(".option3").text(result[0].questions[queIndex].options[2]);
     $(".option4").text(result[0].questions[queIndex].options[3]);
-    $(".questionNumber").text(queCount+"/ 10")
+    $(".questionNumber").text("Q."+queCount)
     queIndex++;
     if(queCount==10)
     {
@@ -64,7 +57,7 @@ $(".next").click(function(){
 
 });
 
-$('div.option1').click(function(){
+$('.option1').click(function(){
     selectedIndex = 0;
     $(".option1").css("background-color", "#4DB6AC");
     $(".option3,.option2,.option4").css("background-color", "#E0F2F1");
@@ -72,7 +65,7 @@ $('div.option1').click(function(){
     console.log(selectedIndex)
 })
 
-$('div.option2').click(function() {
+$('.option2').click(function() {
 
     selectedIndex = 1;
     $(".option2").css("background-color", "#4DB6AC");
@@ -81,8 +74,7 @@ $('div.option2').click(function() {
    console.log(selectedIndex)
 })
 
-$('div.option3').click(function() {
-
+$('.option3').click(function() {
     selectedIndex =2;
     $(".option3").css("background-color", "#4DB6AC");
     $(".option1,.option2,.option4").css("background-color", "#E0F2F1");
@@ -90,7 +82,7 @@ $('div.option3').click(function() {
     console.log(selectedIndex)
 })
 
-$('div.option4').click(function() {
+$('.option4').click(function() {
 
     selectedIndex =3;
     $(".option4").css("background-color", "#4DB6AC");
