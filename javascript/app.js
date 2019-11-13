@@ -104,8 +104,18 @@ function checkAns()
     }
     console.log(correctAns);
     //alert(`You Scored : ${correctAns}`);
-    $(".quiz").hide();
+    if(correctAns<5)
+    {
+        $(".wishing").text("Work Hard")
+    }else if(correctAns>=5 && correctAns<=8)
+    {
+        $(".wishing").text("Improve")
+    }
+    else{
+        $(".wishing").text("Excellent!!")
+    }
     
+    $(".quiz").hide();
     $('.score-display').show();
     $(".score").html(correctAns+"/ 10");
     // document.getElementById('scored').innerText=correctAns;
