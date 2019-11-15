@@ -80,6 +80,7 @@ $(".next").click(function(){
         $(".option1,.option2,.option3,.option4").css("background-color", "#E0F2F1");
     }
 });
+
 //this function called after clicking on first option 
 //this function will asssign selectedindex as 0 and highlight that answer.
 $('.option1').click(function(){
