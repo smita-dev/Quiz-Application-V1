@@ -1,10 +1,8 @@
-
 const express = require('express');
 const mongo = require('mongodb').MongoClient;
 const db = require('./mern/config/config');
 const bodyParser = require('body-parser');
 const cors=require('cors');
-// const bcrypt=require('bcryptjs')
 const port = process.env.PORT || 8000;
 const app = express();
 app.use(cors());

@@ -8,6 +8,8 @@ let result;
 let email;
 let username;
 let password;
+//this function will get called after loading html document
+//this function is for getting question's data from database
 $(document).ready(function(){
     $.ajax({
         type: "GET",
@@ -24,6 +26,7 @@ $(document).ready(function(){
 
 })
 
+//this question will display question and option data
 function getQues(){
     queCount++;
     $(".question").text(result[0].questions[queIndex].question);
@@ -39,6 +42,8 @@ function getQues(){
     }
 }
 
+//this function called after clicking on previous button 
+//this will display previous question
 $(".prev").click(function(){
     $(".option1,.option2,.option3,.option4").css("background-color", "#E0F2F1");
     queIndex--;
@@ -65,6 +70,8 @@ $(".prev").click(function(){
     }
 })
 
+//this function called after clicking on next button 
+//this will display next question
 $(".next").click(function(){
     storeAns(selectedIndex)
     if(queCount<10)
@@ -73,7 +80,8 @@ $(".next").click(function(){
         $(".option1,.option2,.option3,.option4").css("background-color", "#E0F2F1");
     }
 });
-
+//this function called after clicking on first option 
+//this function will asssign selectedindex as 0 and highlight that answer.
 $('.option1').click(function(){
     selectedIndex = 0;
     $(".option1").css("background-color", "#4DB6AC");
@@ -123,9 +131,8 @@ function checkAns()
     $(".quiz").hide();
     $('.score-display').show();
     $(".score").html(correctAns+"/ 10");
-    
-}
 
+}
 
 function storeAns(index)
 {
