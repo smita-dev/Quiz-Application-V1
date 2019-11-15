@@ -1,4 +1,3 @@
-
 let text;
 let selectedIndex=-1;
 let queIndex=0;
@@ -15,9 +14,8 @@ $(document).ready(function(){
         dataType: "json",
         url: "https://quizzyapplication.herokuapp.com/",
         success: function(data){
-           result=data;
-           console.log(result)
-           getQues();
+            result=data;
+            getQues();
         },
         error:function(err){
             console.log(err);
@@ -25,8 +23,6 @@ $(document).ready(function(){
     });
 
 })
-
-
 
 function getQues(){
     queCount++;
@@ -42,7 +38,7 @@ function getQues(){
          $(".submitButton").css("display", "flex");
     }
 }
-// ['q1':0,'q4':5]
+
 $(".prev").click(function(){
     $(".option1,.option2,.option3,.option4").css("background-color", "#E0F2F1");
     queIndex--;
@@ -76,15 +72,12 @@ $(".next").click(function(){
         getQues();
         $(".option1,.option2,.option3,.option4").css("background-color", "#E0F2F1");
     }
-
 });
 
 $('.option1').click(function(){
     selectedIndex = 0;
     $(".option1").css("background-color", "#4DB6AC");
     $(".option3,.option2,.option4").css("background-color", "#E0F2F1");
-    // text = $(this).text();
-    console.log(selectedIndex)
 })
 
 $('.option2').click(function() {
@@ -92,16 +85,12 @@ $('.option2').click(function() {
     selectedIndex = 1;
     $(".option2").css("background-color", "#4DB6AC");
     $(".option1,.option3,.option4").css("background-color", "#E0F2F1");
-    // text = $(this).text();
-   console.log(selectedIndex)
 })
 
 $('.option3').click(function() {
     selectedIndex =2;
     $(".option3").css("background-color", "#4DB6AC");
     $(".option1,.option2,.option4").css("background-color", "#E0F2F1");
-    // text = $(this).text();
-    console.log(selectedIndex)
 })
 
 $('.option4').click(function() {
@@ -109,24 +98,17 @@ $('.option4').click(function() {
     selectedIndex =3;
     $(".option4").css("background-color", "#4DB6AC");
     $(".option1,.option2,.option3").css("background-color", "#E0F2F1");
-    // text = $(this).text();
-    console.log(selectedIndex)
-    console.log("option4")
 })
 function checkAns()
 {
     let correctAns=0;
     for(let i=0;i<ansArr.length;i++)
     {
-        console.log(ansArr[i])
-        // console.log(arr[i].answer)
         if(ansArr[i]==result[0].questions[i].answer)
         {
             correctAns++;
         }
     }
-    console.log(correctAns);
-    //alert(`You Scored : ${correctAns}`);
     if(correctAns<5)
     {
         $(".wishing").text("Work Hard")
@@ -141,7 +123,6 @@ function checkAns()
     $(".quiz").hide();
     $('.score-display').show();
     $(".score").html(correctAns+"/ 10");
-    // document.getElementById('scored').innerText=correctAns;
     
 }
 
@@ -157,32 +138,6 @@ $(".submitButton").click(function(){
     checkAns();
 })
 
-
-// $("#submitEmail").click(function(){
-//     email=$("#emailAddress").val();
-//    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-//    if(regex.test(email)){
-//        $(".startquiz").css("display","flex");
-//    }
-
-//    $.ajax({
-//        type: "POST",
-//        dataType: "json",
-//        url: "http://localhost:8000/",
-//        data:{
-//            'email':email
-//        },
-//     //    success: function(data){
-//     //       result=data;
-//     //       console.log(result)
-//     //       //getQues();
-//     //    //    console.log(result[0].questions[0].question)
-//     //    },
-//        error:function(err){
-//            console.log("fail")
-//    }
-//    })
-// })
 
 $(".sign-up").click(function(){
     username=$(".username").val();
@@ -213,22 +168,14 @@ $(".log-in").click(function(){
     password=$(".password").val();
     console.log(username);
     console.log(password);
-    //$(".startquiz").css("display","flex");
     $.ajax({
         type: "GET",
         dataType: "json",
         url: "https://quizzyapplication.herokuapp.com/login",
-        // crossDomain: true,
-        // headers: {
-        //      "accept": "application/json",
-        //     'Access-Control-Allow-Origin':"*"
-        // },
-        // access-control-allow-origin: ,
         success: function(data){
            result=data;
            console.log(result)
            getQues();
-        //    console.log(result[0].questions[0].question)
         },
         error:function(err){
             console.log(err);
