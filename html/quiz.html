@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>     
+        <!-- navbar for showing logo and name of application -->
         <nav class="navbar navbar-light" style="background-color: #4DB6AC;">
                 <a class="font-weight-bold">
                     <img src="/images/logo.png" class="m-2 logo">
@@ -18,26 +19,34 @@
         <div class="container-fluid">      
             <div class="col quiz">
                 <div class="row">
+                    <!-- to display previous button icon -->
                     <div class="col-1 prev"><img src="../images/left.png"></div>
+                     <!-- to display question number -->
                     <div class="col-1 questionNumber">Q1</div>
+                     <!-- to display question -->
                     <div class="col-7 question"></div>
-                   <div class="col-1 next"><img src="../images/right.png"></div>
+                     <!-- to display next button icon -->
+                    <div class="col-1 next"><img src="../images/right.png"></div>
                 </div> 
+                 <!-- to display options -->
                 <div class=" option1"></div>
                 <div class=" option2"></div>
                 <div class=" option3"></div>
                 <div class=" option4"></div>
-                    <button class="row submitButton">Submit</button>
+                <button class="row submitButton">Submit</button>
             </div>
+             <!-- to display score  -->
             <div class="row-12 score-display">
                 <div class="col text-center wishing">Congratulations!!!</div>
                 <div class="col text-center score"></div>
             </div>
         </div>
         
+        <!-- script files for bootstrap and for jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> 
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
+        <!-- link for javascript file -->
         <script src="../javascript/app.js"></script>
     </body>
 </html>
