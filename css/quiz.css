@@ -37,19 +37,9 @@
     color:black;
     margin-top:5%;
     margin-left: 20%;
+    margin: 2%;
     border-radius: 30px;
     background:var(--notSelected);
-}
-.option2{
-    margin: 2%;
-}
-.option3{
-    margin: 2%;
-    margin-left: 20%;
-}
-.option4{
-    margin: 2%;
-    margin-left: 20%;
 }
 .submitButton{
     height:60px;
