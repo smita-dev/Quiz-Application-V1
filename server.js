@@ -8,6 +8,8 @@ const app = express();
 app.use(cors());
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
+
+//connecting to mongodb database
 mongo.connect(db.url, { useNewUrlParser: true, useUnifiedTopology: true }, (err, db) =>
  {
    if (err)
