@@ -30,8 +30,6 @@ $(document).ready(function(){
 
 function getQues(){
     queCount++;
-    // console.log("hii");
-    // console.log(result[0].questions[2].question)
     $(".question").text(result[0].questions[queIndex].question);
     $(".option1").text(result[0].questions[queIndex].options[0]);
     $(".option2").text(result[0].questions[queIndex].options[1]);
@@ -45,7 +43,31 @@ function getQues(){
     }
 }
 // ['q1':0,'q4':5]
-
+$(".prev").click(function(){
+    $(".option1,.option2,.option3,.option4").css("background-color", "#E0F2F1");
+    queIndex--;
+    $(".question").text(result[0].questions[queIndex].question);
+    $(".option1").text(result[0].questions[queIndex].options[0]);
+    $(".option2").text(result[0].questions[queIndex].options[1]);
+    $(".option3").text(result[0].questions[queIndex].options[2]);
+    $(".option4").text(result[0].questions[queIndex].options[3]);
+    $(".questionNumber").text("Q."+queCount);
+    
+    if(ansArr[queIndex]==0)
+    {
+        $(".option1").css("background-color", "#4DB6AC");
+    }
+    else if(ansArr[queIndex]==1)
+    {
+        $(".option2").css("background-color", "#4DB6AC");
+    }
+    else if(ansArr[queIndex]==2)
+    {
+        $(".option3").css("background-color", "#4DB6AC");
+    }else{
+        $(".option4").css("background-color", "#4DB6AC");
+    }
+})
 
 $(".next").click(function(){
     storeAns(selectedIndex)
@@ -89,6 +111,7 @@ $('.option4').click(function() {
     $(".option1,.option2,.option3").css("background-color", "#E0F2F1");
     // text = $(this).text();
     console.log(selectedIndex)
+    console.log("option4")
 })
 function checkAns()
 {
@@ -133,6 +156,7 @@ function storeAns(index)
 $(".submitButton").click(function(){
     checkAns();
 })
+
 
 // $("#submitEmail").click(function(){
 //     email=$("#emailAddress").val();
