@@ -88,6 +88,8 @@ $('.option1').click(function(){
     $(".option3,.option2,.option4").css("background-color", "#E0F2F1");
 })
 
+//this function called after clicking on second option 
+//this function will asssign selectedindex as 1 and highlight that answer.
 $('.option2').click(function() {
 
     selectedIndex = 1;
@@ -95,18 +97,26 @@ $('.option2').click(function() {
     $(".option1,.option3,.option4").css("background-color", "#E0F2F1");
 })
 
+//this function called after clicking on third option 
+//this function will asssign selectedindex as 2 and highlight that answer.
 $('.option3').click(function() {
     selectedIndex =2;
     $(".option3").css("background-color", "#4DB6AC");
     $(".option1,.option2,.option4").css("background-color", "#E0F2F1");
 })
 
+//this function called after clicking on fourth option 
+//this function will asssign selectedindex as 3 and highlight that answer.
 $('.option4').click(function() {
 
     selectedIndex =3;
     $(".option4").css("background-color", "#4DB6AC");
     $(".option1,.option2,.option3").css("background-color", "#E0F2F1");
 })
+
+//this function will execute after submitting quiz 
+//In this function it will check for how many answer are correct or not 
+//and calculating score and displaying it.
 function checkAns()
 {
     let correctAns=0;
@@ -134,58 +144,15 @@ function checkAns()
 
 }
 
+//this function will called after clicking on next button
+//it will store given answer index in array.
 function storeAns(index)
 {
     ansArr.push(index);
     selectedIndex = -1;
-    console.log(index)
-    console.log(ansArr);
 }
+
+//this function will execute after clicking on submit button
 $(".submitButton").click(function(){
     checkAns();
 })
-
-
-$(".sign-up").click(function(){
-    username=$(".username").val();
-    password=$(".password").val();
-    passwordRepeat=$(".password-repeat").val();
-    if(password!=passwordRepeat)
-    {
-        alert("password is not same !!!");
-    }
-    console.log(username);
-    console.log(password);
-    //$(".startquiz").css("display","flex");
-    $.ajax({
-        type: "POST",
-        dataType: "json",
-        url: "https://quizzyapplication.herokuapp.com/",
-        data:{
-            Username:username,
-            Password:password
-        },
-        error:function(err){
-            console.log("fail")
-    }
-    })
-})
-$(".log-in").click(function(){
-    username=$(".username").val();
-    password=$(".password").val();
-    console.log(username);
-    console.log(password);
-    $.ajax({
-        type: "GET",
-        dataType: "json",
-        url: "https://quizzyapplication.herokuapp.com/login",
-        success: function(data){
-           result=data;
-           console.log(result)
-           getQues();
-        },
-        error:function(err){
-            console.log(err);
-        }
-    })
-});
