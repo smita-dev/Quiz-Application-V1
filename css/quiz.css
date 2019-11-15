@@ -25,7 +25,7 @@
 .prev{
     margin-right: 1%;
 }
-.option1{
+.option1,.option2,.option3,.option4{
     height:50px;
     width:40%;
     justify-content: center;
@@ -41,47 +41,13 @@
     background:var(--notSelected);
 }
 .option2{
-    height:50px;
-    width:40%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    font-family:sans-serif;
-    font-style:bold;
-    font-size:1em;
-    color:black;
     margin: 2%;
-    margin-left: 20%;
-    border-radius: 30px;
-    background:var(--notSelected);
 }
 .option3{
-    height:50px;
-    width:40%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    font-family:sans-serif;
-    font-style:bold;
-    font-size:1em;
-    color:black;
     margin: 2%;
     margin-left: 20%;
-    border-radius: 30px;
-    background:var(--notSelected);
 }
 .option4{
-    height:50px;
-    width:40%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    font-family:sans-serif;
-    font-style:bold;
-    font-size:1em;
-    color:black;
-    border-radius: 30px;
-    background:var(--notSelected);
     margin: 2%;
     margin-left: 20%;
 }
@@ -90,7 +56,6 @@
     width:180px;
     justify-content: center;
     align-items: center;
-    /* display: none; */
     font-family:sans-serif;
     font-style:bold;
     font-size:1em;

@@ -32,9 +32,6 @@
     align-items: center;
     display: flex;
 }
-/* .startquiz{
-    display: none;
-} */
 .heading{
     height: 20%;
     width: 100vw;
@@ -76,6 +73,3 @@
     height: 29px;;
     cursor: pointer;
 }
-/* .label{
-    margin: 1rem;
-} */
